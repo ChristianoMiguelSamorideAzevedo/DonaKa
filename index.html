@@ -1,12 +1,267 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title> DonaKa Web</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="icon" href="assets/img/favicoamarelo.ico" />
+    <title>DonaKa — Sua loja favorita</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
+  <body>
+    <!-- ===================== HEADER ===================== -->
+    <header class="site-header">
+      <div class="header-inner">
+        <!-- Logo -->
+        <a href="index.html" class="header-logo" aria-label="DonaKa início">
+          <img src="/assets/img/logo.png" alt="DonaKa" />
+        </a>
 
-  <body></body>
+        <!-- Search Bar -->
+        <div class="header-search" role="search">
+          <input
+            type="search"
+            id="main-search"
+            class="header-search__input"
+            placeholder="Buscar produto, marca ou categoria…"
+            autocomplete="off"
+            aria-label="Buscar produtos"
+          />
+          <button class="header-search__btn" aria-label="Pesquisar">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+
+        <!-- Header Actions -->
+        <div class="header-actions">
+          <a
+            href="favorites.html"
+            class="header-action"
+            aria-label="Minhas compras"
+          >
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span>Favoritos</span>
+          </a>
+          <a href="contact.html" class="header-action" aria-label="Entrar">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Entrar</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="site-nav" aria-label="Navegação principal">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-link nav-link--active">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          Home
+        </a>
+        <a href="#categorias" class="nav-link">Categorias</a>
+        <a href="#ofertas" class="nav-link">Ofertas</a>
+        <a href="#cupons" class="nav-link">Cupons</a>
+        <a href="#em-alta" class="nav-link">Em alta</a>
+        <a href="contact.html" class="nav-link">Contato</a>
+      </div>
+    </nav>
+
+    <!-- ===================== SPINNER ===================== -->
+    <div
+      class="spinner-overlay hidden"
+      id="spinner"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="spinner"></div>
+      <span class="spinner-text">Carregando produtos…</span>
+    </div>
+
+    <!-- ===================== MAIN ===================== -->
+    <main class="site-main">
+      <div class="layout">
+        <!-- ---- SIDEBAR ---- -->
+        <aside class="sidebar" aria-label="Categorias">
+          <section class="sidebar-section" id="categorias">
+            <h2 class="sidebar-title">Categorias</h2>
+            <ul class="sidebar-list" id="category-list">
+              <li>
+                <button
+                  class="sidebar-item sidebar-item--active"
+                  data-category="all"
+                >
+                  <span class="sidebar-icon">🛍️</span> Todos
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="electronics">
+                  <span class="sidebar-icon">📱</span> Eletrônicos
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="men's clothing">
+                  <span class="sidebar-icon">👔</span> Moda Masculina
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="women's clothing">
+                  <span class="sidebar-icon">👗</span> Moda Feminina
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="jewelery">
+                  <span class="sidebar-icon">💍</span> Joias
+                </button>
+              </li>
+            </ul>
+          </section>
+
+          <section
+            class="sidebar-section sidebar-frete"
+            aria-label="Frete grátis"
+          >
+            <div class="frete-badge">
+              <span class="frete-icon" aria-hidden="true">🏷️</span>
+              <span class="frete-label">Frete grátis</span>
+            </div>
+            <ul class="sidebar-list" id="frete-list">
+              <li>
+                <button class="sidebar-item" data-category="electronics">
+                  <span class="sidebar-icon">📱</span> Eletrônicos
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="men's clothing">
+                  <span class="sidebar-icon">👔</span> Moda Masculina
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="women's clothing">
+                  <span class="sidebar-icon">👗</span> Moda Feminina
+                </button>
+              </li>
+              <li>
+                <button class="sidebar-item" data-category="jewelery">
+                  <span class="sidebar-icon">💍</span> Joias
+                </button>
+              </li>
+            </ul>
+          </section>
+        </aside>
+
+        <!-- ---- CONTENT ---- -->
+        <div class="content">
+          <!-- Banner -->
+          <section class="banner" id="ofertas" aria-label="Ofertas imperdíveis">
+            <div class="banner-text">
+              <p class="banner-sub">Aproveite agora</p>
+              <h2 class="banner-title">OFERTAS<br />IMPERDÍVEIS</h2>
+              <div class="banner-badge">
+                até <strong>50%</strong><span>OFF</span>
+              </div>
+            </div>
+            <div class="banner-images" aria-hidden="true">
+              <img
+                src="https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+                alt=""
+              />
+              <img
+                src="https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+                alt=""
+              />
+              <img
+                src="https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_FMwebp_QL65_.jpg"
+                alt=""
+              />
+            </div>
+          </section>
+
+          <!-- Products Header -->
+          <div class="products-header" id="em-alta">
+            <h2 class="products-heading">Produtos em destaque</h2>
+            <span
+              class="products-count"
+              id="products-count"
+              aria-live="polite"
+            ></span>
+          </div>
+
+          <!-- Products Grid -->
+          <section aria-label="Lista de produtos">
+            <div class="products-grid" id="products-grid"></div>
+            <div class="empty-state hidden" id="empty-state">
+              <span class="empty-emoji">🔍</span>
+              <h3>Nenhum produto encontrado</h3>
+              <p>Tente outro termo de busca ou categoria.</p>
+            </div>
+          </section>
+        </div>
+        <!-- /content -->
+      </div>
+      <!-- /layout -->
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/img/DonaKa.png" alt="DonaKa" class="footer-logo" />
+        <p>
+          Desenvolvido por Miguel Samori com ❤️ para Karina — DonaKa Web &copy;
+          2026
+        </p>
+      </div>
+    </footer>
+
+    <script type="module" src="assets/js/main.js"></script>
+  </body>
 </html>

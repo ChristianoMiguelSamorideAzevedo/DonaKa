@@ -1,9 +1,215 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Fale com a Ka</title>
+    <title>DonaKa — Contato</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body></body>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="header-logo" aria-label="DonaKa início">
+          <img src="img/logo.png" alt="DonaKa" />
+        </a>
+        <div class="header-search" role="search">
+          <input
+            type="search"
+            class="header-search__input"
+            placeholder="Buscar produto…"
+            aria-label="Buscar produtos"
+          />
+          <button class="header-search__btn" aria-label="Pesquisar">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-action">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span>Compras</span>
+          </a>
+          <a href="contact.html" class="header-action header-action--active">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Entrar</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegação principal">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-link">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          Contato
+        </a>
+        <a href="index.html#categorias" class="nav-link">Categorias</a>
+        <a href="index.html#ofertas" class="nav-link">Ofertas</a>
+        <a href="index.html#cupons" class="nav-link">Cupons</a>
+        <a href="index.html#em-alta" class="nav-link">Em alta</a>
+        <a href="contact.html" class="nav-link nav-link--active">Contato</a>
+      </div>
+    </nav>
+
+    <main class="site-main site-main--flat">
+      <div class="contact-wrap">
+        <div class="contact-info">
+          <h1>Fale com a Ka 💬</h1>
+          <p>
+            Tem uma sugestão, encontrou algum problema ou quer só dar um oi?
+            Preencha o formulário ao lado!
+          </p>
+          <ul class="contact-perks">
+            <li>
+              <span class="perk-icon">⚡</span> Resposta rápida em até 24h
+            </li>
+            <li>
+              <span class="perk-icon">🔒</span> Seus dados nunca são
+              compartilhados
+            </li>
+            <li>
+              <span class="perk-icon">💡</span> Adoramos sugestões — nos ajude a
+              melhorar!
+            </li>
+            <li>
+              <span class="perk-icon">💛</span> Elogiar a DonaKa? Compartilhe
+              com outros shoppers!
+            </li>
+          </ul>
+        </div>
+
+        <div class="contact-form-card">
+          <form id="contact-form" novalidate aria-label="Envie uma mensagem">
+            <div class="form-group">
+              <label for="name">Nome completo</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Karina Samori"
+                autocomplete="name"
+              />
+              <span
+                class="field-error"
+                id="name-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                placeholder="karina@email.com"
+                autocomplete="email"
+              />
+              <span
+                class="field-error"
+                id="email-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
+            </div>
+            <div class="form-group">
+              <label for="message">Mensagem</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="5"
+                placeholder="Escreva sua mensagem aqui…"
+              ></textarea>
+              <span
+                class="field-error"
+                id="message-error"
+                role="alert"
+                aria-live="polite"
+              ></span>
+            </div>
+            <button type="submit" class="btn-submit">Enviar mensagem 🚀</button>
+          </form>
+
+          <div
+            class="form-success hidden"
+            id="form-success"
+            role="status"
+            aria-live="polite"
+          >
+            <div class="success-icon" aria-hidden="true">✅</div>
+            <h3>Mensagem Enviada!</h3>
+            <p>Obrigada pelo contato. Retornaremos em breve.</p>
+            <button class="btn-reset" id="btn-reset">
+              Enviar outra mensagem
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img src="/assets/img/logo.png" alt="DonaKa" class="footer-logo" />
+        <p>
+          Desenvolvido por Miguel Samori ❤️ para <strong>Karina</strong> —
+          DonaKa Web &copy; 2026
+        </p>
+      </div>
+    </footer>
+
+    <script src="assets/js/form.js"></script>
+  </body>
 </html>
