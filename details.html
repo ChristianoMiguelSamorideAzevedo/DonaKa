@@ -1,73 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>DonaKa — Detalhes do produto</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
-</head>
-<body>
-
-  <header class="site-header">
-    <div class="header-inner">
-      <a href="index.html" class="header-logo" aria-label="DonaKa início">
-        <img src="img/logo.png" alt="DonaKa" />
-      </a>
-      <div class="header-search" role="search">
-        <input type="search" class="header-search__input" placeholder="Buscar produto…" aria-label="Buscar produtos" />
-        <button class="header-search__btn" aria-label="Pesquisar">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-        </button>
-      </div>
-      <div class="header-actions">
-        <a href="favorites.html" class="header-action">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
-          <span>Compras</span>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DonaKa — Detalhes do produto</title>
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Outfit:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="header-logo" aria-label="DonaKa início">
+          <img src="/assets/img/logo3.png" alt="DonaKa" />
         </a>
-        <a href="contact.html" class="header-action">
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-          <span>Entrar</span>
-        </a>
+        <div class="header-search" role="search">
+          <input
+            type="search"
+            class="header-search__input"
+            placeholder="Buscar produto…"
+            aria-label="Buscar produtos"
+          />
+          <button class="header-search__btn" aria-label="Pesquisar">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="11" cy="11" r="8" />
+              <line x1="21" y1="21" x2="16.65" y2="16.65" />
+            </svg>
+          </button>
+        </div>
+        <div class="header-actions">
+          <a href="favorites.html" class="header-action">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z" />
+              <line x1="3" y1="6" x2="21" y2="6" />
+              <path d="M16 10a4 4 0 01-8 0" />
+            </svg>
+            <span>Compras</span>
+          </a>
+          <a href="contact.html" class="header-action">
+            <svg
+              width="22"
+              height="22"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2" />
+              <circle cx="12" cy="7" r="4" />
+            </svg>
+            <span>Entrar</span>
+          </a>
+        </div>
       </div>
+    </header>
+
+    <nav class="site-nav" aria-label="Navegação principal">
+      <div class="nav-inner">
+        <a href="index.html" class="nav-link">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            aria-hidden="true"
+          >
+            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+          </svg>
+          Home
+        </a>
+        <a href="index.html#categorias" class="nav-link">Categorias</a>
+        <a href="index.html#ofertas" class="nav-link">Ofertas</a>
+        <a href="index.html#cupons" class="nav-link">Cupons</a>
+        <a href="index.html#em-alta" class="nav-link">Em alta</a>
+        <a href="contact.html" class="nav-link">Contato</a>
+      </div>
+    </nav>
+
+    <div
+      class="spinner-overlay hidden"
+      id="spinner"
+      role="status"
+      aria-live="polite"
+    >
+      <div class="spinner"></div>
+      <span class="spinner-text">Carregando produto…</span>
     </div>
-  </header>
 
-  <nav class="site-nav" aria-label="Navegação principal">
-    <div class="nav-inner">
-      <a href="index.html" class="nav-link">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
-        Detalhes
-      </a>
-      <a href="index.html#categorias" class="nav-link">Categorias</a>
-      <a href="index.html#ofertas" class="nav-link">Ofertas</a>
-      <a href="index.html#cupons" class="nav-link">Cupons</a>
-      <a href="index.html#em-alta" class="nav-link">Em alta</a>
-      <a href="contact.html" class="nav-link">Contato</a>
-    </div>
-  </nav>
+    <main class="site-main site-main--flat">
+      <div class="detail-wrap">
+        <a href="index.html" class="back-link">← Voltar para a loja</a>
+        <div id="detail-content"></div>
+      </div>
+    </main>
 
-  <div class="spinner-overlay hidden" id="spinner" role="status" aria-live="polite">
-    <div class="spinner"></div>
-    <span class="spinner-text">Carregando produto…</span>
-  </div>
+    <footer class="site-footer">
+      <div class="footer-inner">
+        <img
+          src="/assets/img/banner_transparente.png"
+          alt="DonaKa"
+          class="footer-logo"
+        />
+        <p>
+          Desenvolvido por Miguel Samori com ❤️ para Karina — DonaKa Web &copy;
+          2026
+        </p>
+      </div>
+    </footer>
 
-  <main class="site-main site-main--flat">
-    <div class="detail-wrap">
-      <a href="index.html" class="back-link">← Voltar para a loja</a>
-      <div id="detail-content"></div>
-    </div>
-  </main>
-
-  <footer class="site-footer">
-    <div class="footer-inner">
-      <img src="img/logo.png" alt="DonaKa" class="footer-logo" />
-      <p>Feito com ❤️ para <strong>Karina</strong> — DonaKa Web &copy; 2025</p>
-    </div>
-  </footer>
-
-  <script type="module" src="assets/js/details.js"></script>
-</body>
+    <script type="module" src="assets/js/details.js"></script>
+  </body>
 </html>
