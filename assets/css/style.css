@@ -390,12 +390,13 @@ button {
   );
   border-radius: var(--r-lg);
   padding: 28px 32px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   align-items: center;
-  justify-content: space-between;
+  gap: 20px;
   overflow: hidden;
   position: relative;
-  min-height: 170px;
+  min-height: 210px;
   box-shadow: var(--shadow-md);
 }
 
@@ -428,7 +429,7 @@ button {
 .banner-title {
   font-family: "Nunito", sans-serif;
   font-weight: 900;
-  font-size: 2rem;
+  font-size: 2.3rem;
   color: var(--navy);
   line-height: 1.1;
   text-shadow: 0 2px 8px rgba(255, 255, 255, 0.4);
@@ -455,30 +456,32 @@ button {
   font-weight: 900;
   line-height: 1;
 }
+
 .banner-badge span {
   font-size: 1rem;
   font-weight: 900;
 }
 
-.banner-images {
+.banner-image {
   display: flex;
-  align-items: flex-end;
-  gap: -12px;
+  align-items: center;
+  justify-content: center;
   position: relative;
   z-index: 2;
 }
 
-.banner-images img {
-  height: 130px;
-  width: auto;
+.banner-image img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
   object-fit: contain;
-  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15));
+  border-radius: 16px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
   transition: transform 0.3s ease;
-  margin-left: -10px;
 }
 
-.banner-images img:hover {
-  transform: scale(1.05) translateY(-4px);
+.banner-image img:hover {
+  transform: scale(1.02);
 }
 
 /* ================================================================
@@ -1109,12 +1112,16 @@ button {
     grid-template-columns: 1fr 1fr;
   }
   .banner {
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
+    display: block;
+    text-align: center;
+    padding: 20px;
   }
-  .banner-images {
-    align-self: flex-end;
+  .banner-text {
+    margin-bottom: 18px;
+  }
+  .banner-image {
+    display: flex;
+    justify-content: center;
   }
   .detail-card {
     grid-template-columns: 1fr;

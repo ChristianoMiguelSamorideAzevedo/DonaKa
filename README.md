@@ -121,3 +121,9 @@ Desenvolvedor Front-end em formação, apaixonado por tecnologia, aprendizado co
 
 - 🌐 LinkedIn: https://www.linkedin.com/in/SEU-LINK-AQUI
 - 📧 E-mail: miguelsamzevedo@gmail.com
+
+
+
+# 🌍 English Version
+
+(README em inglês aqui)
